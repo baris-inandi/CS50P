@@ -10,5 +10,6 @@ bindings = {
 
 out = bindings[input("File name: ")]
 
-if out == None:
+if out is None:
     out = "application/octet-stream"
+print(out)
