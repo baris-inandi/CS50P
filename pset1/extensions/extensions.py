@@ -1,15 +1,19 @@
+# bind all defined file types
 bindings = {
     "gif": "image/gif",
     "jpg": "image/jpg",
     "jpeg": "image/jpeg",
     "png": "image/png",
-    "pdf": "document/pdf",
-    "txt": "text/txt",
-    "zip": "document/zip",
+    "pdf": "application/pdf",
+    "txt": "application/txt",
+    "zip": "application/zip",
 }
 
-out = bindings[input("File name: ")]
+# split the input with delimeter "." and get the last element (index -1)
+ext = input("File name: ").split(".")[-1]
+out = bindings[ext]
 
 if out is None:
+    # if the extension is not defined, apply the default output
     out = "application/octet-stream"
 print(out)
