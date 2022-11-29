@@ -9,8 +9,8 @@ bindings = {
     "zip": "application/zip",
 }
 
-# split the input with delimeter "." and get the last element (index -1)
-ext = input("File name: ").split(".")[-1].lower()
+# split the stripped input with delimeter "." and get the last element (index -1)
+ext = input("File name: ").split(".")[-1].strip().lower()
 # use .get here to avoid an Exception
 out = bindings.get(ext)
 
