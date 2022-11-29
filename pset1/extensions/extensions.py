@@ -7,3 +7,8 @@ bindings = {
     "txt": "text/txt",
     "zip": "document/zip",
 }
+
+out = bindings[input("File name: ")]
+
+if out == None:
+    out = "application/octet-stream"
