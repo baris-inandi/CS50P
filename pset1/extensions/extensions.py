@@ -11,7 +11,7 @@ bindings = {
 
 # split the input with delimeter "." and get the last element (index -1)
 ext = input("File name: ").split(".")[-1].lower()
-out = bindings[ext]
+out = bindings.get(ext) # use .get to avoid an Exception
 
 if out is None:
     # if the extension is not defined, apply the default output
