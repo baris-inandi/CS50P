@@ -9,16 +9,18 @@ def valid_input(x):
 def main():
     # define initial price of 50 cents
     due = 50
-    # ask for input for the first time
-    i = valid_input("Insert Coin: ")
-    while i:
-        due -= i
-        # ask for input
-        print(f"Amount due: {due}")
+    while True:
         i = valid_input("Insert Coin: ")
-
-    if due < 0:
-        print(f"Change owed {-1*due}")
+        if i:
+            due -= int(i)
+        # ask for input
+        if due <= 0:
+            # if $0 or less due, stop asking for coins
+            if due < 0:
+                # if there is a charge owed (not 0)
+                print(f"Change owed {-1*due}")
+            break
+        print(f"Amount due: {due}")
 
 
 if __name__ == "__main__":
