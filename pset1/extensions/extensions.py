@@ -10,7 +10,7 @@ bindings = {
 }
 
 # split the input with delimeter "." and get the last element (index -1)
-ext = input("File name: ").split(".")[-1]
+ext = input("File name: ").split(".")[-1].lower()
 out = bindings[ext]
 
 if out is None:
