@@ -2,8 +2,8 @@ def valid_input(x):
     # returns the string only if it is a valid denomination
     i = input(x)
     if i in ["25", "10", "5"]:
-        return i
-    return None
+        return int(i)
+    return 0
 
 
 def main():
@@ -11,8 +11,7 @@ def main():
     due = 50
     while True:
         i = valid_input("Insert Coin: ")
-        if i:
-            due -= int(i)
+        due -= i
         # ask for input
         if due <= 0:
             # if $0 or less due, stop asking for coins
