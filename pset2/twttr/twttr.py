@@ -1,6 +1,8 @@
 def main():
-    # translate removes characters in the vowel list from the string
-    print(input("Input: ").translate(None, ["a", "e", "i", "o", "u"]))
+    vowels = ["a", "e", "i", "o", "u"]
+    i = input("Input: ")
+    #
+    print("".join(c for c in i if c not in vowels))
 
 
 if __name__ == "__main__":
