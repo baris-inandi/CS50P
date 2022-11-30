@@ -5,35 +5,34 @@ def main():
     else:
         print("Invalid")
 
+
 def ends_with_nums(s):
-    non_num_index = 0
-    s.reverse()
+    if s.isalpha():
+        return True
+    for i, c in enumerate(s):
+        if c.isnumeric():
+            return "".join(list(s)[i:]).isnumeric()
+    return False
+
+
+def first_num_non_zero(s):
     for c in s:
-        if c.isLetter:
-            break
-        non_num_index+=1
-    s.reverse()
-    s = s[:non_num_index]
-    print(s)
-        
-        
+        if c.isnumeric():
+            if c == "0":
+                return False
+            return True
+    return True
+
 
 def is_valid(s):
-    """
-    “All vanity plates must start with at least two letters.”
-    “… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”
-    “Numbers cannot be used in the middle of a plate; they must come at the end. For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable. The first number used cannot be a ‘0’.”
-    “No periods, spaces, or punctuation marks are allowed.”
-    """
-    if 
-        s.isalnum()
-        and s[0].isalnum()
-        and s[1].isalnum()
-        and len(s) == 6
-        and ends_with_nums(s)
-        :
-        pass
-    pass
+    return (
+        s.isalnum()  # all alphanumeric
+        and len(s) >= 2  # length between 2
+        and len(s) <= 6  # and 6
+        and s[:2].isalpha()  # first two chars should be letters
+        and first_num_non_zero(s)  # first number shouldn't be 0
+        and ends_with_nums(s)  # should end with numbers or have no numbers at all
+    )
 
 
 main()
