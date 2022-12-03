@@ -2,6 +2,7 @@
     "gitdoc.enabled": true,
     "tabout.disableByDefault": true,
     "cSpell.words": [
-        "emojize"
+        "emojize",
+        "pyfiglet"
     ]
 }
