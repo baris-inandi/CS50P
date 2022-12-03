@@ -10,5 +10,5 @@ font = args.font
 figlet = Figlet()
 # set font to `font` arg from argparse if it is not `None`
 if font:
-    figlet.setFont()
+    figlet.setFont(font=font)
 print(figlet.renderText(input("")))
