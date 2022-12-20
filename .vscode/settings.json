@@ -3,6 +3,7 @@
     "tabout.disableByDefault": true,
     "cSpell.words": [
         "emojize",
-        "pyfiglet"
+        "pyfiglet",
+        "tablefmt"
     ]
 }
