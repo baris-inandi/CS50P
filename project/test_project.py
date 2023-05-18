@@ -1,14 +1,7 @@
 import os
 import shutil
 
-import project
-from project import (
-    decrypt_file,
-    encrypt,
-    encrypt_file,
-    generate_decrypt_outfile,
-    zip_directory,
-)
+from project import decrypt_file, encrypt_file, generate_decrypt_outfile, zip_directory
 
 TEST_DIRECTORY = ".test_files"
 
