@@ -42,7 +42,7 @@ def encrypt_file(inpath: str, password: str, index: int = 0) -> str:
         raise OSError("No available filepath: too many files with the same name.")
     if not path.exists(inpath):
         tc.cprint(
-            f"Skip file {'inpath'}: Could not encrypt file because it does not exist.",
+            f"Skip file {inpath}: Could not encrypt file because it does not exist.",
             "red",
         )
         return ""
