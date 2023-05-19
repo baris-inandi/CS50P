@@ -1,6 +1,6 @@
 # FileEncryptor
 
-**Video Demo:**  youtube.com/watch?v=xyz
+**Video Demo:**  [https://youtu.be/0dOqaxExYQ0](https://youtu.be/0dOqaxExYQ0)
 
 ## Description
 
